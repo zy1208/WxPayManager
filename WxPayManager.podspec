@@ -10,8 +10,8 @@ s.ios.deployment_target = '9.0'
 s.source = {:git => 'https://github.com/zy1208/WxPayManager.git',:tag => s.version}
 s.source_files = 'WxPayManager/*.{h,m}','WxPayManager/Wx/*.{h}'
 s.requires_arc = true
-s.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security', 'CoreLocation'
-s.ios.library = 'c++','stdc++','z'
+s.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security', 'CoreTelephony'
+s.ios.library = 'c++','sqlite3.0','z'
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-s.vendored_libraries = 'WxPayManagerSDK/Wx/*.a'
+s.vendored_libraries = 'WxPayManager/Wx/*.a'
 end
